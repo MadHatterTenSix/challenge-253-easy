@@ -113,7 +113,9 @@ public class Challenge
             if (age < 65)
             {
                 royalty = royaltyRateUnder65 * annualIncome;
-                if (endingBalanceWithInterest >= clawbackBalanceTrigger)
+//                if (endingBalanceWithInterest >= clawbackBalanceTrigger)
+                if (Float.compare(endingBalanceWithInterest, clawbackBalanceTrigger) > 0
+                        || Float.compare(endingBalanceWithInterest, clawbackBalanceTrigger) == 0)
                 {
                     clawback = royaltyRateUnder65 * annualLoanAmount;
                 }
@@ -121,7 +123,9 @@ public class Challenge
             else if (age >= 65)
             {
                 royalty = royaltyRateOver65 * annualIncome;
-                if (endingBalanceWithInterest >= clawbackBalanceTrigger)
+//                if (endingBalanceWithInterest >= clawbackBalanceTrigger)
+                if (Float.compare(endingBalanceWithInterest, clawbackBalanceTrigger) > 0
+                        || Float.compare(endingBalanceWithInterest, clawbackBalanceTrigger) == 0)
                 {
                     clawback = royaltyRateOver65 * annualLoanAmount;
                 }
