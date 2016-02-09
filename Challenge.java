@@ -7,6 +7,8 @@
  * [2016-02-08] Challenge #253 [Easy] Unconditional Loan Income
  * https://www.reddit.com/r/dailyprogrammer/comments/44qzj5/20160208_challenge_253_easy_unconditional_loan/
  *
+ * Edit 1: changed float comparisions to use Float.compare()
+ * Edit 2: removed unused 'private float incomingStream;' variable
  */
 
 package dailyprogrammer;
@@ -24,7 +26,6 @@ public class Challenge
     private float clawbackBalanceTrigger;
     private float royaltyRateUnder65;
     private float royaltyRateOver65;
-    private float incomingStream;
     private ArrayList<Integer> incomeStream;
 
     /* Output Values  */
@@ -42,7 +43,6 @@ public class Challenge
         clawbackBalanceTrigger = (float)0;
         royaltyRateUnder65 = (float)0;
         royaltyRateOver65 = (float)0;
-        incomingStream = (float)0;
         incomeStream = new ArrayList<>();
 
         /* Output Values  */
