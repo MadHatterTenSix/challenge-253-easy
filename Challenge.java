@@ -239,16 +239,7 @@ public class Challenge
         Scanner input = new Scanner(System.in);
         String line = input.nextLine();
 
-        if (!line.isEmpty())
-        {
-            int token;
-            StringTokenizer st = new StringTokenizer(line);
-            while (st.hasMoreTokens())
-            {
-                token = stringToInt(st.nextToken());
-                stream.add(token);
-            }
-        }
+        stream = readIncomeStream(line);
 
         return stream;
     }
